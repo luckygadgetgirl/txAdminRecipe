@@ -16,7 +16,7 @@ tasks:
     src: ./tmp/qbcore/server.cfg
     dest: ./server.cfg
 
-      - action: move_path
+  - action: move_path
     src: ./tmp/qbox/permissions.cfg
     dest: ./permissions.cfg
 
