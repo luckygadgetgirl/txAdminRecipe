@@ -1,4 +1,8 @@
- r: Lucky City RP
+$engine: 3
+$onesync: on
+name: QBCore Framework
+version: 1.0.0
+author: Lucky City RP
 description: An advanced FiveM RP framework including jobs, gangs, housing & more!
 
 tasks:
@@ -82,10 +86,10 @@ tasks:
     ref: master
     src: https://github.com/qbcore-framework/PolyZone
  
-  - action: download_github
-    dest: ./resources/[standalone]/scully_emotemenu
-    ref: main
-    src: https://github.com/Scullyy/scully_emotemenu
+  # - action: download_github
+  #   dest: ./resources/[standalone]/scully_emotemenu
+  #   ref: main
+  #   src: https://github.com/Scullyy/scully_emotemenu
 
   - action: download_file
     path: ./tmp/Renewed-Weathersync.zip
@@ -158,10 +162,10 @@ tasks:
   #   ref: main
   #   src: https://github.com/luckygadgetgirl/rpemotes
 
-  # - action: download_github
-  #   dest: ./resources/[qb]/qb-management
-  #   ref: main
-  #   src: https://github.com/qbcore-framework/qb-management
+  - action: download_github
+    dest: ./resources/[qb]/qb-management
+    ref: main
+    src: https://github.com/qbcore-framework/qb-management
 
   - action: waste_time # prevent github throttling
     seconds: 10
