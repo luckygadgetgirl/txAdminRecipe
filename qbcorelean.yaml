@@ -1,8 +1,4 @@
-$engine: 3
-$onesync: on
-name: QBCore Framework
-version: 1.0.0
-author: Lucky City RP
+ r: Lucky City RP
 description: An advanced FiveM RP framework including jobs, gangs, housing & more!
 
 tasks:
@@ -133,11 +129,11 @@ tasks:
   - action: waste_time # prevent github throttling
     seconds: 10
 
-  # Downloading QBCore resources
-  - action: download_github
-    dest: ./resources/[qb]/qb-core
-    ref: main
-    src: https://github.com/luckygadgetgirl/qb-core
+  # # Downloading QBCore resources
+  # - action: download_github
+  #   dest: ./resources/[qb]/qb-core
+  #   ref: main
+  #   src: https://github.com/luckygadgetgirl/qb-core
 
   - action: download_github
     dest: ./resources/[qb]/qb-scoreboard
@@ -157,15 +153,15 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-hud
 
-  - action: download_github
-    dest: ./resources/[qb]/rpemotes
-    ref: main
-    src: https://github.com/luckygadgetgirl/rpemotes
+  # - action: download_github
+  #   dest: ./resources/[qb]/rpemotes
+  #   ref: main
+  #   src: https://github.com/luckygadgetgirl/rpemotes
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-management
-    ref: main
-    src: https://github.com/qbcore-framework/qb-management
+  # - action: download_github
+  #   dest: ./resources/[qb]/qb-management
+  #   ref: main
+  #   src: https://github.com/qbcore-framework/qb-management
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -180,15 +176,15 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-apartments
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-spawn
-    ref: main
-    src: https://github.com/luckygadgetgirl/qb-spawn
+  # - action: download_github
+  #   dest: ./resources/[qb]/qb-spawn
+  #   ref: main
+  #   src: https://github.com/luckygadgetgirl/qb-spawn
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-smallresources
-    ref: main
-    src: https://github.com/luckygadgetgirl/qb-smallresources
+  # - action: download_github
+  #   dest: ./resources/[qb]/qb-smallresources
+  #   ref: main
+  #   src: https://github.com/luckygadgetgirl/qb-smallresources
 
   - action: waste_time # prevent github throttling
     seconds: 10
