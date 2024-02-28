@@ -1,0 +1,221 @@
+$engine: 3
+$onesync: on
+name: QBCore Framework
+version: 1.0.0
+author: Lucky City RP
+description: An advanced FiveM RP framework including jobs, gangs, housing & more!
+
+tasks:
+  #  Download Base Files
+  - action: download_github
+    src: https://github.com/luckygadgetgirl/txAdminRecipe
+    ref: main
+    dest: ./tmp/qbcore
+
+  - action: move_path
+    src: ./tmp/qbcore/server.cfg
+    dest: ./server.cfg
+
+  - action: move_path
+    src: ./tmp/qbcore/ox.cfg
+    dest: ./ox.cfg
+
+  - action: move_path
+    src: ./tmp/qbcore/myLogo.png
+    dest: ./myLogo.png
+
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/qbcore/qbcore.sql
+
+  # STANDALONE
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    subpath: resources
+    dest: ./resources/[cfx-default]
+
+  - action: download_file
+    url: https://github.com/iLLeniumStudios/illenium-appearance/releases/download/v5.6.1/illenium-appearance.zip
+    path: ./tmp/illenium-appearance.zip
+  - action: unzip
+    src: ./tmp/illenium-appearance.zip
+    dest: ./resources/[standalone]/illenium-appearance
+
+  - action: download_file
+    path: ./tmp/menuv.zip
+    url: https://github.com/ThymonA/menuv/releases/download/v1.4.1/menuv_v1.4.1.zip
+  - action: unzip
+    dest: ./resources/[standalone]/menuv
+    src: ./tmp/menuv.zip
+
+  - action: download_github
+    dest: ./resources/[standalone]/bob74_ipl
+    ref: master
+    src: https://github.com/Bob74/bob74_ipl
+
+  - action: download_github
+    dest: ./resources/[standalone]/safecracker
+    ref: main
+    src: https://github.com/qbcore-framework/safecracker
+
+  - action: download_file
+    path: ./tmp/screenshot-basic.zip
+    url: https://github.com/project-error/screenshot-basic/releases/latest/download/screenshot-basic.zip
+  - action: unzip
+    dest: ./resources/[standalone]/screenshot-basic
+    src: ./tmp/screenshot-basic.zip
+
+  - action: download_github
+    dest: ./resources/[standalone]/progressbar
+    ref: main
+    src: https://github.com/qbcore-framework/progressbar
+
+  - action: download_github
+    dest: ./resources/[standalone]/interact-sound
+    ref: master
+    src: https://github.com/qbcore-framework/interact-sound
+
+  - action: download_github
+    dest: ./resources/[standalone]/connectqueue
+    ref: master
+    src: https://github.com/qbcore-framework/connectqueue
+
+  - action: download_github
+    dest: ./resources/[standalone]/PolyZone
+    ref: master
+    src: https://github.com/qbcore-framework/PolyZone
+ 
+  - action: download_github
+    dest: ./resources/[standalone]/scully_emotemenu
+    ref: main
+    src: https://github.com/Scullyy/scully_emotemenu
+
+  - action: download_file
+    path: ./tmp/Renewed-Weathersync.zip
+    url: https://github.com/Renewed-Scripts/Renewed-Weathersync/releases/latest/download/Renewed-Weathersync.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/Renewed-Weathersync.zip
+
+  - action: download_file
+    path: ./tmp/Renewed-Banking.zip
+    url: https://github.com/Renewed-Scripts/Renewed-Banking/releases/latest/download/Renewed-Banking.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/Renewed-Banking.zip
+
+  - action: download_github
+    dest: ./resources/[lib]/Renewed-Lib
+    ref: main
+    src: https://github.com/Renewed-Scripts/Renewed-Lib
+
+  - action: download_github
+    dest: ./resources/[standalone]/jim_bridge
+    ref: main
+    src: https://github.com/jimathy/jim_bridge
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+    # VOICE
+  - action: download_github
+    dest: ./resources/[voice]/pma-voice
+    ref: main
+    src: https://github.com/AvarianKnight/pma-voice
+
+    # MAPS
+  - action: download_github
+    dest: ./resources/[defaultmaps]/hospital_map
+    ref: main
+    src: https://github.com/qbcore-framework/hospital_map
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  # Downloading QBCore resources
+  - action: download_github
+    dest: ./resources/[qb]/qb-core
+    ref: main
+    src: https://github.com/luckygadgetgirl/qb-core
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-scoreboard
+    ref: main
+    src: https://github.com/qbcore-framework/qb-scoreboard
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-multicharacter
+    ref: main
+    src: https://github.com/qbcore-framework/qb-multicharacter
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-hud
+    ref: main
+    src: https://github.com/qbcore-framework/qb-hud
+
+  - action: download_github
+    dest: ./resources/[qb]/rpemotes
+    ref: main
+    src: https://github.com/luckygadgetgirl/rpemotes
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-management
+    ref: main
+    src: https://github.com/qbcore-framework/qb-management
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-radialmenu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-radialmenu
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-apartments
+    ref: main
+    src: https://github.com/qbcore-framework/qb-apartments
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-spawn
+    ref: main
+    src: https://github.com/luckygadgetgirl/qb-spawn
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-smallresources
+    ref: main
+    src: https://github.com/luckygadgetgirl/qb-smallresources
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-newsjob
+    ref: main
+    src: https://github.com/qbcore-framework/qb-newsjob
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-interior
+    ref: main
+    src: https://github.com/qbcore-framework/qb-interior
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-menu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-menu
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-input
+    ref: main
+    src: https://github.com/qbcore-framework/qb-input
+
+  # Clean up
+  - action: remove_path
+    path: ./tmp
