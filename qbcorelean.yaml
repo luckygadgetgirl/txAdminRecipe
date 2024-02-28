@@ -16,6 +16,10 @@ tasks:
     src: ./tmp/qbcore/server.cfg
     dest: ./server.cfg
 
+      - action: move_path
+    src: ./tmp/qbox/permissions.cfg
+    dest: ./permissions.cfg
+
   - action: move_path
     src: ./tmp/qbcore/ox.cfg
     dest: ./ox.cfg
@@ -111,7 +115,7 @@ tasks:
     src: https://github.com/Renewed-Scripts/Renewed-Lib
 
   - action: download_github
-    dest: ./resources/[standalone]/jim_bridge
+    dest: ./resources/[lib]/jim_bridge
     ref: main
     src: https://github.com/jimathy/jim_bridge
 
